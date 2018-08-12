@@ -33,6 +33,6 @@ management:
         - "*" #disabling security to enalbe actuator to call actuator/refresh url
 
 server:
-  port: 8089
+  port: 0
 
 
