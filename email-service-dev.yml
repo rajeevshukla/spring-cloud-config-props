@@ -16,10 +16,8 @@
   rabbitmq:
     host=localhost
 
- server:
-  port: 8089
-
-
+server:
+ port: 8089
 #============== Eureka client service registration
  eureka:
   client:
