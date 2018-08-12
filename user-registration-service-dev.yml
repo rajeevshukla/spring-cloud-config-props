@@ -24,5 +24,8 @@ server:
 #============== Eureka client service registration
 eureka:
   client:
-    service-url:
-      default-zone: http://localhost:8761/eureka/
+    serviceUrl:
+     defaultZone: http://localhost:8761/eureka/
+    instance:
+     instance-id: ${spring.application.name}:${random.int[5000,6000]}
+     prefer-ip-address: true
