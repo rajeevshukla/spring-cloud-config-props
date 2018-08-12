@@ -1,19 +1,20 @@
 
- spring:
-    mail:
-    host: smtp.gmail.com
-    port: 587
-    username: noreplyatsharebazar
-    password: sharebazar@123
-    properties.mail.smtp:
-       auth: true
-       starttls.enable: true
+spring:
+   rabbitmq:
+    host: localhost
+   mail:
+   host: smtp.gmail.com
+   port: 587
+   username: noreplyatsharebazar
+   password: sharebazar@123
+   properties.mail.smtp:
+      auth: true
+      starttls.enable: true
 #========= RabbitMQ configuration ============
-  rabbitmq:
-    host=localhost
+  
 
 #============== Eureka client service registration
- eureka:
+eureka:
   client:
     serviceUrl:
      defaultZone: https://localhost:8761/eureka/
@@ -24,14 +25,14 @@
     #secure-port-enabled: false
     #non-secure-port-enabled: true
     #secure-port: ${server.port}
- management:
+management:
   endpoints:
     web:
       exposure:
         include:
         - "*" #disabling security to enalbe actuator to call actuator/refresh url
 
- server:
+server:
   port: 8089
 
 
