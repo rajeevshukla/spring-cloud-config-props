@@ -2,7 +2,7 @@
  spring:
   mail:
    host: smtp.gmail.com
-	port: 587
+    port: 587
 	username: noreplyatsharebazar
 	password: sharebazar@123
 	properties:
