@@ -20,10 +20,7 @@ server:
   error:
     whitelabel:
       enabled: false 
-
-
 #server.port=${random.int[9051,9080]}
-
 #============== Eureka client service registration
 eureka:
   client:
