@@ -1,0 +1,31 @@
+spring:
+ rabbitmq:
+   host: localhost
+   username=guest
+   password=guest
+
+ datasource:
+   url: jdbc:mysql://localhost:3306/user_db
+   username=root
+   password=password
+ jpa:
+   hibernate:
+     ddl-auto: update
+   properties: 
+     hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+   show-sql: true
+
+server:
+  port: 9090
+  error:
+    whitelabel:
+      enabled: false 
+
+
+#server.port=${random.int[9051,9080]}
+
+#============== Eureka client service registration
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
