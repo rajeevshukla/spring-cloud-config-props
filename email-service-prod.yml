@@ -27,9 +27,9 @@ eureka:
   client:
     serviceUrl:
      defaultZone: http://netflix-eureka-naming-server:8761/eureka/
-    instance:
-     instanceId: ${spring.application.name}:${random.int[5000,6000]}
-     preferIpAddress: true
+  instance:
+    instanceId: ${spring.application.name}:${random.int[5000,6000]}
+    preferIpAddress: true
     #hostname: localhost #ipaddress of this host 
     #secure-port-enabled: false
     #non-secure-port-enabled: true
