@@ -9,6 +9,16 @@ spring:
     properties.mail.smtp:
        auth: true
        starttls.enable: true
+   # in docker environment if you don't ignore these network intefaces you won't be able 
+   #to hit Eureka ---> your service
+   cloud:
+    inetutils:
+      ignored-interfaces:
+        - eth0
+        - eth1
+        - eth2
+        - eth3
+        - lo
 #========= RabbitMQ configuration ============
   
 
@@ -17,9 +27,9 @@ eureka:
   client:
     serviceUrl:
      defaultZone: http://netflix-eureka-naming-server:8761/eureka/
-    #instance:
-     #instance-id: ${spring.application.name}:${random.int[5000,6000]}
-     #prefer-ip-address: false
+    instance:
+     instance-id: ${spring.application.name}:${random.int[5000,6000]}
+     prefer-ip-address: true
     #hostname: localhost #ipaddress of this host 
     #secure-port-enabled: false
     #non-secure-port-enabled: true
