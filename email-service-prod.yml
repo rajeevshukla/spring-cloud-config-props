@@ -19,6 +19,14 @@ spring:
         - eth2
         - eth3
         - lo
+    zipkin:
+     enabled: true
+     base-url: http://zipkin:9411
+     service:
+      name: ${spring.application.name}
+    sleuth:
+     sampler:
+      probability: 1
 #========= RabbitMQ configuration ============
   
 
