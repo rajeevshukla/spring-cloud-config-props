@@ -1,5 +1,5 @@
 spring:
-   rabbitmq:
+  rabbitmq:
     host: rabbitmq
    mail:
     host: smtp.gmail.com
@@ -11,7 +11,7 @@ spring:
        starttls.enable: true
    # in docker environment if you don't ignore these network intefaces you won't be able 
    #to hit Eureka ---> your service
-   cloud:
+  cloud:
     inetutils:
       ignored-interfaces:
         - eth0
@@ -19,13 +19,13 @@ spring:
         - eth2
         - eth3
         - lo
-    zipkin:
-     enabled: true
-     base-url: http://zipkin:9411
-     service:
+  zipkin:
+    enabled: true
+    base-url: http://zipkin:9411
+    service:
       name: ${spring.application.name}
-    sleuth:
-     sampler:
+  sleuth:
+    sampler:
       probability: 1
 #========= RabbitMQ configuration ============
   
