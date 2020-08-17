@@ -5,7 +5,7 @@ spring:
    password: guest
 
  datasource:
-   url: jdbc:mysql://mysql:3306/user_db
+   url: jdbc:mysql://mysql:3306/test
    username: root
    password: password
  jpa:
