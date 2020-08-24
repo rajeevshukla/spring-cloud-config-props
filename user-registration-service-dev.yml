@@ -22,6 +22,9 @@ spring:
  sleuth:
     sampler:
       probability: 1
+user:
+   property: 
+      value: Config Value
 
 server:
   port: 0

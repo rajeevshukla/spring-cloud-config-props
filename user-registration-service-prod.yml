@@ -5,7 +5,7 @@ spring:
    password: guest
 
  datasource:
-   url: jdbc:mysql://mysql:3306/test
+   url: jdbc:mysql://mysql:3306/user_db
    username: root
    password: password
  jpa:
@@ -16,6 +16,10 @@ spring:
    show-sql: true
    # ignoring network intefaces in docker world to make sure that eureka is working
  cloud:
+    bus:
+      enabled: true
+      refresh:
+        enabled: true
     inetutils:
       ignored-interfaces:
         - eth0
@@ -45,3 +49,14 @@ eureka:
   instance:
     instance-id: ${spring.application.name}:${random.int[5000,6000]}
     preferIpAddress: true
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*" #disabling security to enable actuator to call actuator/refresh url
+user:
+  property: 
+    value: Config Value   

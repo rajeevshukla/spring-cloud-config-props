@@ -12,6 +12,10 @@ spring:
    # in docker environment if you don't ignore these network intefaces you won't be able 
    #to hit Eureka ---> your service
   cloud:
+    bus:
+      enabled: true
+      refresh:
+        enabled: true
     inetutils:
       ignored-interfaces:
         - eth0
@@ -43,13 +47,16 @@ eureka:
     #non-secure-port-enabled: true
     #secure-port: ${server.port}
 management:
+  security:
+    enabled: false
   endpoints:
     web:
       exposure:
         include:
-        - "*" #disabling security to enalbe actuator to call actuator/refresh url
+        - "*" #disabling security to enable actuator to call actuator/refresh url
 
 server:
   port: 8089
+
 
 
