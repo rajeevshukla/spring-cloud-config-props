@@ -5,7 +5,7 @@ spring:
     host: smtp.gmail.com
     port: 587
     username: noreplyatsharebazar
-    password: Sh@reB@z@r@321
+    password: W$%ildl$keH$$L
     properties.mail.smtp:
        auth: true
        starttls.enable: true
