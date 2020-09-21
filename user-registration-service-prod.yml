@@ -59,4 +59,4 @@ management:
         - "*" #disabling security to enable actuator to call actuator/refresh url
 user:
   property: 
-    value: Config Value 3  
+    value: Config Value 4  
